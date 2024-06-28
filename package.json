@@ -2,7 +2,13 @@
   "name": "ocpp-vcp-nodejs",
   "version": "0.0.1",
   "description": "Simple OCPP Virtual Charging Point",
-  "scripts": {},
+  "scripts": {
+    "tsc": "tsc",
+    "start": "ts-node index_201.ts",
+    "start_16": "ts-node src/wsClient.ts && ts-node index_16.ts",
+    "websocket": "ts-node src/wsClient.ts",
+    "dev": "ts-node-dev --respawn index_201.ts"
+  },
   "author": "Solidstudio",
   "license": "Apache-2.0",
   "dependencies": {
@@ -10,12 +16,17 @@
     "dotenv": "^16.0.0",
     "typescript": "^4.5.5",
     "uuid": "^8.3.2",
-    "winston": "^3.5.1",
-    "ws": "^8.4.2"
+    "winston": "^3.13.0",
+    "ws": "^8.17.1"
   },
   "devDependencies": {
     "@types/uuid": "^8.3.4",
-    "@types/ws": "^8.2.2",
-    "ts-node": "^10.9.1"
+    "@types/ws": "^8.5.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.8",
+    "utf-8-validate": "^6.0.4"
   }
 }

@@ -9,7 +9,7 @@ interface TransactionState {
   startedAt: Date;
   evseId: number;
   connectorId: number;
-  meterValuesTimer?: NodeJS.Timer;
+  meterValuesTimer?: any;
 }
 
 export class TransactionManager {

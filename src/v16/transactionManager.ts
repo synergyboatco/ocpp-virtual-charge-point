@@ -8,7 +8,7 @@ interface TransactionState {
   meterValue: number;
   startedAt: Date;
   connectorId: number;
-  meterValuesTimer?: NodeJS.Timer;
+  meterValuesTimer?: any;
 }
 
 export class TransactionManager {
